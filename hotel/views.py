@@ -4,18 +4,20 @@ from django.shortcuts import render
 
 from ourservice.models import Contactform
 
-def ContactPage(request):
-
+def contactus(request):
     msg=""
-    if request.method=='POST':
-        name=request.POST.get('name')
-        email=request.POST.get('email')
-        subject=request.POST.get('subject')
-        message=request.POST.get('message')
-        alldata=Contactform(name=name,email=email,subject=subject,message=message)
-        alldata.save() 
-        msg="Data Inserted"
-
+    if request.method =='POST':
+        fullname = request.POST.get('fullname', '').strip()
+        email = request.POST.get('email', '').strip()
+        subject = request.POST.get('subject', '').strip()
+        message = request.POST.get('message', '').strip()
+        if not fullname or not email or not subject or not message:
+            msg = "All fields are required. Please fill them out."
+        else:
+            # Save data to the database
+            alldata = Contactform(fullname=fullname, email=email, subject=subject, message=message)
+            alldata.save()
+            msg = "Your message has been successfully sent."
     return render(request,"contact.html",{'msg':msg})
 
 

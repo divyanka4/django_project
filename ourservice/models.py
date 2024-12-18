@@ -9,7 +9,7 @@ from django.db import models
 # from django.db import models
 # Create your models here.
 class Contactform (models.Model):
-    name=models.CharField( max_length=150)
+    fullname=models.CharField( max_length=150)
     email=models.CharField( max_length=150)
     subject=models.CharField( max_length=150)
     message=models.CharField( max_length=250)

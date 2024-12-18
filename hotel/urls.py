@@ -8,7 +8,7 @@ urlpatterns = [
     path('about.html', views.aboutUs),
     path('amenities.html', views.amenitiesPage),
     path('booking.html', views.bookingPage),
-    path('contact.html', views.contactPage),
+    path('contact.html', views.contactus),
     path('login.html', views.loginPage),
     path('room.html', views.roomPage),
        
