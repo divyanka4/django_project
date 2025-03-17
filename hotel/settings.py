@@ -134,4 +134,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # EMAIL_PORT = 587
 # EMAIL_USE_TLS = True
 # EMAIL_HOST_USER = 'divi44246@gmail.com'  # Replace with your email
-# EMAIL_HOST_PASSWORD = 'divi@454545'  # Replace with your email password
+# EMAIL_HOST_PASSWORD = ''  # Replace with your email password
